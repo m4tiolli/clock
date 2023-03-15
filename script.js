@@ -1,8 +1,8 @@
 setInterval(() => {
   const date = new Date();
-  const hour = date.getHours();
-  const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
+  const hour = date.getHours() < 10 ? "0" + date.getHours(): date.getHours();
+  const minutes = date.getMinutes() < 10 ? "0" + date.getMinutes(): date.getMinutes();
+  const seconds = date.getSeconds() < 10 ? "0" + date.getSeconds(): date.getSeconds();
   const numberDay = date.getDay();
   const arrayDay = new Array(
     "Domingo",
@@ -13,9 +13,6 @@ setInterval(() => {
     "Sexta-feira",
     "Sábado"
   );
-  if (seconds.length == 1) {
-    seconds = "0" + seconds
-  }
   const day = arrayDay[numberDay];
   document.getElementById(
     "clock"

@@ -13,6 +13,9 @@ setInterval(() => {
     "Sexta-feira",
     "Sábado"
   );
+  if (seconds.length = 1) {
+    seconds = "0" + seconds
+  }
   const day = arrayDay[numberDay];
   document.getElementById(
     "clock"

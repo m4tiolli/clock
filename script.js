@@ -29,7 +29,7 @@ setInterval(() => {
     "Dezembro"
   )
   const day = arrayDay[numberDay];
-  const month = arrayMonth[numberMonth];
+  const month = arrayMonth[numberMonth - 1];
   document.getElementById(
     "clock"
   ).innerHTML = `<p class="day">${day}</p><p class="time">${hour}:${minutes}:${seconds}</p><br/><p class="day">${month}, ${year}</p>`;
